@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dys Read Case Study: Full Figma View</title>
+    <!-- Load Tailwind CSS for easy responsiveness and styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            /* Ensures no extra margin/padding around the edge of the image */
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            font-family: 'Inter', sans-serif;
+        }
+        /* Makes sure the image container is fluid */
+        #case-study-display {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="w-full mx-auto">
+        <!-- 
+            Header for context and navigation (optional, but good practice) 
+            It's important to provide an easy way for the recruiter to get back to your main portfolio.
+        -->
+        <header class="bg-white shadow-md p-4 sticky top-0 z-10 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-indigo-700">Redefining Udemy</h1>
+            <!-- NOTE: You would replace # with the URL of your main portfolio page -->
+            <a href="Homepage.html" class="px-4 py-2 bg-indigo-500 text-white text-sm font-semibold rounded-lg hover:bg-indigo-600 transition duration-300 shadow-lg">
+                &larr; Back to Portfolio
+            </a>
+        </header>
+
+        <!-- Main Content Area: The Case Study Image -->
+        <main id="case-study-display" class="pt-4 pb-12">
+            <!-- 
+                FIXED: Replaced the local file reference ('image_a45e52.png') with a public placeholder URL 
+                to ensure the page loads correctly.
+                
+                ACTION NEEDED: Replace the 'src' attribute below with the public URL 
+                of your hosted Figma image (e.g., from Imgur, Dropbox, or your web server).
+            -->
+            <img 
+                src="C:\Users\sanja\Downloads\Case study 3.png"
+                alt="Full UX Case Study for Cognia, showing research, wireframes, and final mockups." 
+                class="w-full h-auto block mx-auto shadow-xl"
+                onerror="handleImageError(this)"
+            >
+            
+            <p id="image-error-message" class="hidden text-center text-red-600 p-4 mt-4 bg-red-100 rounded-lg max-w-lg mx-auto">
+                **Error:** The case study image failed to load. Please **replace the 'src' URL in the code** with the public link to your hosted Figma image.
+            </p>
+        </main>
+    </div>
+    <script>
+        // Function to handle image loading errors gracefully
+        function handleImageError(imageElement) {
+            imageElement.style.display = 'none'; // Hide the broken image icon
+            document.getElementById('image-error-message').classList.remove('hidden'); // Show the custom error message
+            console.error("Failed to load the case study image. Please check the 'src' URL.");
+        }
+    </script>
+<footer id="contact" class="py-10 text-center border-t border-gray-200 mt-16">
+            <p class="text-sm text-gray-500">
+                &copy; 2025 Sanjana Malipatil. | Built with Tailwind CSS.
+            </p>
+        </footer>
+</body>
+</html>
